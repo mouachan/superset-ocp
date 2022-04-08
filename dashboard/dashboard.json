@@ -1,0 +1,537 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Etablissements KPI",
+                "description": null,
+                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null, \"remote_id\": 1}",
+                "position_json": "{\"CHART-QGwVlKkxxU\":{\"children\":[],\"id\":\"CHART-QGwVlKkxxU\",\"meta\":{\"chartId\":2,\"height\":50,\"sliceName\":\"NB hospitalisation par ville\",\"uuid\":\"aea6af1a-2a76-44db-a65a-4f3510912b9e\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-lIK4zxZnKH\"],\"type\":\"CHART\"},\"CHART-rHyGtW-nbl\":{\"children\":[],\"id\":\"CHART-rHyGtW-nbl\",\"meta\":{\"chartId\":3,\"height\":50,\"sliceName\":\"Nombre Hospitalisation France\",\"uuid\":\"00af4a9b-30bb-4275-a1c1-397985a18f0e\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-lIK4zxZnKH\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-lIK4zxZnKH\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Etablissements KPI\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-lIK4zxZnKH\":{\"children\":[\"CHART-rHyGtW-nbl\",\"CHART-QGwVlKkxxU\"],\"id\":\"ROW-lIK4zxZnKH\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "etbtarif",
+                            "datasource_type": "table",
+                            "id": 3,
+                            "params": "{\"adhoc_filters\": [], \"datasource\": \"3__table\", \"extra_form_data\": {}, \"header_font_size\": 0.5, \"metric\": {\"aggregate\": null, \"column\": null, \"expressionType\": \"SQL\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"sum(nombre_hospitalisations)\", \"optionName\": \"metric_ncf2tb539ub_dug90nycg9c\", \"sqlExpression\": \"sum(nombre_hospitalisations)\"}, \"subheader_font_size\": 0.3, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"big_number_total\", \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 3, \"datasource_name\": \"etbtarif\", \"schema\": null, \"database_name\": \"CNAM DB\"}",
+                            "query_context": "{\"datasource\":{\"id\":3,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"sum(nombre_hospitalisations)\",\"column\":null,\"aggregate\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"sum(nombre_hospitalisations)\",\"optionName\":\"metric_ncf2tb539ub_dug90nycg9c\"}],\"annotation_layers\":[],\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Nombre Hospitalisation France",
+                            "viz_type": "big_number_total"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "etbtarif",
+                            "datasource_type": "table",
+                            "id": 2,
+                            "params": "{\"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": null, \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_yg78q95u73_1m55kotldhj\", \"isExtra\": false, \"isNew\": false, \"operator\": \"IS NOT NULL\", \"operatorId\": \"IS_NOT_NULL\", \"sqlExpression\": null, \"subject\": \"nombre_hospitalisations\"}], \"color_scheme\": \"supersetColors\", \"datasource\": \"3__table\", \"date_format\": \"smart_date\", \"donut\": false, \"extra_form_data\": {}, \"groupby\": [\"commune\"], \"innerRadius\": 30, \"label_line\": true, \"label_type\": \"key\", \"labels_outside\": true, \"legendOrientation\": \"left\", \"legendType\": \"scroll\", \"metric\": {\"aggregate\": null, \"column\": null, \"expressionType\": \"SQL\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"sum(nombre_hospitalisations)\", \"optionName\": \"metric_z8pq6oaku4m_u2j820dur0n\", \"sqlExpression\": \"sum(nombre_hospitalisations)\"}, \"number_format\": \"SMART_NUMBER\", \"outerRadius\": 70, \"row_limit\": 100, \"show_labels\": true, \"show_labels_threshold\": 5, \"show_legend\": true, \"slice_id\": 2, \"sort_by_metric\": true, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"pie\", \"remote_id\": 2, \"datasource_name\": \"etbtarif\", \"schema\": null, \"database_name\": \"CNAM DB\"}",
+                            "query_context": "{\"datasource\":{\"id\":3,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[{\"col\":\"nombre_hospitalisations\",\"op\":\"IS NOT NULL\"}],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"commune\"],\"metrics\":[{\"aggregate\":null,\"column\":null,\"expressionType\":\"SQL\",\"hasCustomLabel\":false,\"isNew\":false,\"label\":\"sum(nombre_hospitalisations)\",\"optionName\":\"metric_z8pq6oaku4m_u2j820dur0n\",\"sqlExpression\":\"sum(nombre_hospitalisations)\"}],\"orderby\":[[{\"aggregate\":null,\"column\":null,\"expressionType\":\"SQL\",\"hasCustomLabel\":false,\"isNew\":false,\"label\":\"sum(nombre_hospitalisations)\",\"optionName\":\"metric_z8pq6oaku4m_u2j820dur0n\",\"sqlExpression\":\"sum(nombre_hospitalisations)\"},false]],\"annotation_layers\":[],\"row_limit\":100,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "NB hospitalisation par ville",
+                            "viz_type": "pie"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "nom",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 37,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "7a2478d4-da59-4ff7-8885-b345bfb51f2e",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "adresse_ligne_1",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 38,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "4ece3ee1-47dd-4f16-b4ef-4a13e5d72efc",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "adresse_ligne_2",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 39,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "12d786a0-4b30-4ec7-a5e4-d8c5d848bc60",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "adresse_ligne_3",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 40,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "ec74eebf-b90f-46be-827f-532ed64d4168",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "code_postal",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 41,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "fdc500b9-b132-4fa6-aa0c-5f36b7a16b5e",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "commune",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 42,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "46a81bdc-8d9f-4944-a7ed-dacc8147f95f",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "telephone",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 43,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "00828fdb-ad1d-4772-9504-61bc077349df",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "type",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 44,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "6bcc8376-e843-42f1-b505-e785d5e08ed9",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "specialite",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 45,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "bca1321d-e147-41fa-b5cb-58507bec7ae6",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "acte_ou_maladie",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 46,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "85566372-3abd-464d-b4b6-c766d9ed3f4a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "nombre_hospitalisations",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 47,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "f3cb0fb4-3875-435b-af40-80a76d630faf",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "indicateur_nombre_hospitalisations",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 48,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "c57a28be-5938-4ba4-8a00-4540854376e9",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "nombre_moyen_nuitees_sjour",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 49,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "2ccb093a-0962-4561-9b2b-12c266d210fc",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "indicateur_nombre_nuitees",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 50,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "79211718-4404-49bc-b604-a46dce486174",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "cout_global",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 51,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "751e52ec-8210-464e-973c-0771d4845a24",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "remboursement_cnamts",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 52,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "0d5405c4-6c7f-48c7-b819-1af2ec29ec88",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "reste_charge_frais_hospitalisation",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 53,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "6453bcbc-d620-42c9-b6c4-23847e17c432",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T11:36:35"
+                            },
+                            "column_name": "reste_charge_deppassements_honoraires",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 54,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "TEXT",
+                            "uuid": "254e3b49-77fb-4c35-8a19-3cec779a7acf",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2022-04-05T10:12:10"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 3,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 3,
+                            "uuid": "1e7d45a1-a7cc-4da5-a8c9-fe88606db7c4",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 3, \"database_name\": \"CNAM DB\"}",
+                "schema": null,
+                "sql": null,
+                "table_name": "etbtarif",
+                "template_params": null
+            }
+        }
+    ]
+}
