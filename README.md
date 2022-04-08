@@ -57,10 +57,12 @@ helm delete superset
 ```
 oc new-project demo-superset-operator
 ```
-### install ope datahub
-Follow the instruction to installl Open Data Hub operator, then instantiate a deployment  Open Data Hub : https://opendatahub.io/docs/getting-started/quick-installation.html
+### install Open Data Hub
+Follow the instruction `https://opendatahub.io/docs/getting-started/quick-installation.html` to installl Open Data Hub Operator, then instantiate an Open Data Hub deployment
 
-Open Data Hub install superset, configure the security to use openshift OAUTH and allows users to run with any UID   
+Open Data Hub install superset, configure the security. You can configure/customize superset through configmaps :
+- superset-config to configure cpu/ram requests/limits and secrets names of superset and superset_db pods
+- superset-config.py to customize 
 
 ### login to superset
 get the route 
