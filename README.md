@@ -68,7 +68,7 @@ Open Data Hub install superset, configure the security. You can configure/custom
 get the route 
 ```
 ⇣ ❯ oc get route | grep superset
-superset   superset-demo-superset-helm.apps.cluster-z7f6f.z7f6f.sandbox644.opentlc.com          superset   http
+superset   superset-demo-superset-operator.apps.cluster-z7f6f.z7f6f.sandbox644.opentlc.com          superset   http
 ```
 Use the url to access to superset using the Openshift credentials
 
