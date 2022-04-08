@@ -45,8 +45,9 @@ superset   superset-demo-superset-helm.apps.cluster-z7f6f.z7f6f.sandbox644.opent
 Use the url to access to superset
 
 ## delete superset 
+```
 helm delete superset
-
+```
 
 ## Using opendatahub
 ### create a new namespace
@@ -56,6 +57,7 @@ oc new-project demo-superset-operator
 ### install ope datahub
 Follow the instruction to installl Open Data Hub operator, then instantiate a deployment  Open Data Hub : https://opendatahub.io/docs/getting-started/quick-installation.html
 
+### login to superset
 get the route 
 ```
 ⇣ ❯ oc get route | grep superset
