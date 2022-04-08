@@ -13,12 +13,13 @@ oc login <OCP_API_URL> -u <username> -p <password>
 oc new-project demo-superset-helm
 ```
 ### create postgresql database
+Postgresql image : `https://catalog.redhat.com/software/containers/rhel8/postgresql-10/5ba0ae0ddd19c70b45cbf4cd`
 ```
 oc new-app \
     -e POSTGRESQL_USER=superset \
     -e POSTGRESQL_PASSWORD=superset \
     -e POSTGRESQL_DATABASE=supersetdb \
-    postgresql:10.0
+    postgresql:10
 ```
 ### add a service account
 ```
